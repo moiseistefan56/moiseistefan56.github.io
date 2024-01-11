@@ -1,0 +1,57 @@
+<html>
+    <header style="background-color: #001E28;">
+        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+            <div style="display: flex; align-items: center;">
+                <img style="height: 55px;" src="Football.png"/>
+                <a href='index.html' style="text-decoration: none;">
+                    <b style="font-size: 30px; color: white;">FlashScore</b>
+                </a> 
+            </div>
+            <div style="display: flex; align-items: center;">
+                <img style="height: 45px;" src="score-removebg-preview.png"/>
+                <a href='index.html' style="text-decoration: none;">
+                    <b style="margin-left: 15px; color: white;">REZULTATE</b>
+                </a>
+                <img style="height: 45px; margin-left: 90px;" src="R-removebg-preview.png"/>
+                <a href="stiri.html" style="text-decoration: none;">
+                    <b style="margin-left: 15px; color: white;">STIRI</b>
+                </a>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <img style="height: 45px;" src="login.png"/>
+                <a href="login.html" style="text-decoration: none;">
+                    <b style="margin-left: 15px; color: white;">LOGIN</b>
+                </a>
+            </div>
+        </div>
+    </header>
+    <body style='background-image: url("wallpaperlogin.jpg");background-size: cover;background-repeat: no-repeat;margin:0'>
+        <form id="login-form" style="top: 25%; margin-left: 34%;position: relative;">
+            <div style="width: 400px; padding: 20px; display: flex; flex-direction: column;">
+                <h2 style="align-self: center; margin-bottom: 10px; color: white;"><b>Log in</b></h2> 
+                <input required style="margin-bottom: 10px; height: 40px; padding: 10px; border-radius: 10px;" id="username" type="email" placeholder="- Enter the email -"/>
+                <input required style="height: 40px; padding: 10px; border-radius: 10px;" type="password" placeholder="- Enter the password -" id="password"/>
+                <input required style="margin-top: 10px; height: 40px; padding: 10px; border-radius: 10px;" type="text" placeholder="- First name -" id="name"/>
+                <input style="margin-top: 20px; height: 40px; width: 180px; align-self: center;background-color: #02175B; color: white; border-radius: 15px;" type="submit" onclick="logInUser(event)"/>
+            </div>
+        </form>
+
+        <script>
+            function logInUser(event) {
+                event.preventDefault();
+                const usernameText = document.getElementById("username").value;
+                const passwordText = document.getElementById("password").value;
+                const nameText = document.getElementById("name").value;
+                 if (passwordText !== "" && usernameText !== "" && nameText !== "") {
+                    localStorage.setItem("username", usernameText);
+                    localStorage.setItem("password", passwordText);
+                    localStorage.setItem("name" , nameText);
+                    alert("Conectare cu succes, buna " + usernameText + "!");
+                    window.location.href = 'index.html';
+                 } else {
+                    alert("Datele sunt invalide")
+                 }
+            }
+        </script>
+    </body>
+</html>

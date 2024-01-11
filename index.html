@@ -1,0 +1,393 @@
+<html>
+    <head>
+        <style>
+            .lista-campionate {
+                width: 165px;
+                display:flex;
+                flex-direction: column; 
+            }
+            .lista-campionate b {
+                margin-top: 8px;
+            }
+            .tabel-rezultat {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 60px;
+                justify-content: space-between;
+                margin-top: 10px;
+                border-bottom: 1px solid #EEEEEE;
+
+                &:hover {
+                    background-color: #F4F5F5;
+                    border-radius: 10px;
+                }
+            }
+            .tabel-rezultat-date-time {
+                margin-right: 10px; 
+                margin-left: 30px;
+            }
+
+            .icon-name {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: green;
+                color: white;
+                height: 35px;
+                width: 40px;
+                border-radius: 55px;
+                margin-left: 5px;
+                font-size: 30px;
+                padding-bottom: 3px;
+            }
+        </style>
+    </head>
+    <header style="background-color: #001E28;">
+        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+            <div style="display: flex; align-items: center;">
+                <img style="height: 55px;" src="Football.png"/>
+                <a href='index.html' style="text-decoration: none;">
+                    <b style="font-size: 30px; color: white;">FlashScore</b>
+                </a> 
+            </div>
+            <div style="display: flex; align-items: center;">
+                <img style="height: 45px;" src="score-removebg-preview.png"/>
+                <a href='index.html' style="text-decoration: none;">
+                    <b style="margin-left: 15px; color: white;">REZULTATE</b>
+                </a>
+                <img style="height: 45px; margin-left: 90px;" src="R-removebg-preview.png"/>
+                <a href="stiri.html" style="text-decoration: none;">
+                    <b style="margin-left: 15px; color: white;">STIRI</b>
+                </a>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <div id="iconName"></div>
+                <div id="login" style="display: flex; align-items: center; cursor: pointer;">
+                    <img style="height: 45px;" src="login.png"/>
+                    <a href="login.html" style="text-decoration: none;">
+                        <b style="margin-left: 15px; color: white;">LOGIN</b>
+                    </a>
+                </div>
+                <div id="logout" style="display: flex; align-items: center;">
+                    <button onclick="logout()" style="text-decoration: none; background-color: transparent; border: 0; cursor: pointer;">
+                        <b style="margin-left: 15px; color: white;">LOGOUT</b>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <body style="background-color: #EEEEEE; margin:0">
+        <div id="printName" style="margin-left: 25px;"></div>
+
+        <div style="margin-top: 30px; margin-left: 25px; display: flex; flex-direction: row;">
+            <div>
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/_fs/build/world.b7d16db.png"/>
+                    <b>EUROPA</b>
+                </div>
+                <div class="lista-campionate">
+                    <b style="margin-top: 10px;">Euro</b>
+                    <b>Champions League</b>
+                    <b>Europa League</b>
+                    <b>Europa Conference League</b>
+                    <b>UEFA Nations League</b>
+                    <b>Campionatul European U21</b>
+                    <b>Campionatul European U19</b>
+                    <b>Cupa Mondială</b>
+                    <b>Campionatul European U17</b>
+                    <b>Super Cupa Europei</b>
+                    <b>UEFA Regions' Cup</b>
+                    <b>UEFA Youth League</b>
+                    <b>Elite League U20</b>
+                    <b>UEFA Nations League</b>
+                    <b>Atlantic Cup</b>
+                    <b>Baltic Cup</b>
+                    <b>Baltic Cup U21</b>
+                    <b>Emirates Cup</b>
+                    <b>Cupa Marbella</b>
+                    <b>Premier League International Cup</b>
+                    <b>Premier League (Crimea)</b>
+                    <b>Tipsport Malta Cup</b>
+                </div>
+            </div>
+            <div style="width: 49%; background-color: white;border-radius:20px;padding: 15px;margin-left: 20px; display:flex;flex-direction: column;">
+                <h3><b>Ultimele Rezultate</b></h3>
+                <b style="background-color: #EEEEEE; border-radius: 10px; padding: 5px; margin-top:3px;">RUNDA 10</b>
+                <div class="tabel-rezultat">
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="tabel-rezultat-date-time">21.11.21:45</p>
+                        <div>
+                            <div style="display: flex;flex-direction: row; align-items: center;margin-bottom: 8px;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/dzBfrG96-vapN1oxh.png"/>
+                                <p style="margin: 0;">Andorra</p>
+                            </div>
+                            <div style="display: flex;flex-direction: row;align-items: center;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/tSADHlU0-2ybyvrpo.png"/>
+                                <b>Israel</b>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div style="margin-right: 150px;">
+                        <div style="display: flex;flex-direction: row; align-items: center;">
+                            <b>0</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;">
+                            <b>2</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(1)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabel-rezultat">
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="tabel-rezultat-date-time">21.11.21:45</p>
+                        <div>
+                            <div style="display: flex;flex-direction: row; align-items: center;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/GAQDu7jC-zXtZbqMA.png"/>
+                                <b>Croatia</b>
+                            </div>
+                            <div style="display: flex;flex-direction: row;align-items: center;margin-top: 8px;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/4nqjG4jC-dtrVaP64.png"/>
+                                <p style="margin: 0;">Armenia</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div style="margin-right: 150px;">
+                        <div style="display: flex;flex-direction: row; align-items: center;">
+                            <b>1</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(1)</p>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;">
+                            <b>0</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabel-rezultat">
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="tabel-rezultat-date-time">21.11.21:45</p>
+                        <div>
+                            <div style="display: flex;flex-direction: row; align-items: center;margin-bottom: 8px;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/4ESU9TCN-bi7PyVG6.png"/>
+                                <p style="margin: 0; ">Gibraltar</p>
+                            </div>
+                            <div style="display: flex;flex-direction: row;align-items: center;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/MkxaoTAN-fazrR153.png"/>
+                                <b>Olanda</b>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div style="margin-right: 150px;">
+                        <div style="display: flex;flex-direction: row; align-items: center;">
+                            <b>0</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;">
+                            <b>6</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(3)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabel-rezultat">
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="tabel-rezultat-date-time">21.11.21:45</p>
+                        <div>
+                            <div style="display: flex;flex-direction: row; align-items: center;margin-bottom: 8px;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/KGte0qU0-IPNevN3m.png"/>
+                                <p style="margin: 0; ">Grecia</p>
+                            </div>
+                            <div style="display: flex;flex-direction: row;align-items: center;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/04V6zbA6-U3HPIwDq.png"/>
+                                <b>Franta</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-right: 150px;">
+                        <div style="display: flex;flex-direction: row; align-items: center;">
+                            <b>2</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;">
+                            <b>2</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(1)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabel-rezultat">
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="tabel-rezultat-date-time">21.11.21:45</p>
+                        <div>
+                            <div style="display: flex;flex-direction: row; align-items: center;margin-bottom: 8px;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/zBQuzJmC-WnYHA9YO.png"/>
+                                <p style="margin: 0; ">Kosovo</p>
+                            </div>
+                            <div style="display: flex;flex-direction: row;align-items: center;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/OAA58Z76-Cfuwb3yH.png"/>
+                                <b>Belarus</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-right: 150px;">
+                        <div style="display: flex;flex-direction: row; align-items: center;">
+                            <b>0</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;">
+                            <b>1</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(1)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabel-rezultat">
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="tabel-rezultat-date-time">21.11.21:45</p>
+                        <div>
+                            <div style="display: flex;flex-direction: row;align-items: center;margin-bottom: 8px;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/hnpLSMQq-tKviOc0q.png"/>
+                                <b>Romania</b>
+                            </div>
+                            <div style="display: flex;flex-direction: row; align-items: center;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/buRKTH76-88LAtdNt.png"/>
+                                <p style="margin: 0; ">Elvetia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-right: 150px;">
+                        <div style="display: flex;flex-direction: row; align-items: center;">
+                            <b>1</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;">
+                            <b>0</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabel-rezultat">
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="tabel-rezultat-date-time">21.11.21:45</p>
+                        <div>
+                            <div style="display: flex;flex-direction: row; align-items: center;margin-bottom: 8px;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/nwklexDN-YkZoQLK9.png"/>
+                                <p style="margin: 0;">Tara Galilor</p>
+                            </div>
+                            <div style="display: flex;flex-direction: row;align-items: center;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/OIr3e18k-Cfuwb3yH.png"/>
+                                <p style="margin: 0;">Turcia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-right: 150px;">
+                        <div style="display: flex;flex-direction: row; align-items: center;">
+                            <b>1</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(1)</p>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;">
+                            <b>1</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabel-rezultat">
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="tabel-rezultat-date-time">21.11.21:45</p>
+                        <div>
+                            <div style="display: flex;flex-direction: row; align-items: center;margin-bottom: 8px;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/QZdWCC76-vZG58BBc.png"/>
+                                <p style="margin: 0;">Albania</p>
+                            </div>
+                            <div style="display: flex;flex-direction: row;align-items: center;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/vkHBdMjC-fazrR153.png"/>
+                                <p style="margin: 0;">Insulele Feroe</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-right: 150px;">
+                        <div style="display: flex;flex-direction: row; align-items: center;">
+                            <b>0</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;">
+                            <b>0</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabel-rezultat">
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="tabel-rezultat-date-time">21.11.21:45</p>
+                        <div>
+                            <div style="display: flex;flex-direction: row; align-items: center;margin-bottom: 8px;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/GAWR2Tme-b1xaMyVe.png"/>
+                                <b>Cehia</b>
+                            </div>
+                            <div style="display: flex;flex-direction: row;align-items: center;">
+                                <img style="height: 15px; margin-right: 10px;" src="https://static.flashscore.com/res/image/data/25NjMD6k-vapN1oxh.png"/>
+                                <p style="margin: 0;">Moldova</p>
+                                <span style="background-color: red; height: 15px; width: 10px; border-radius: 3px; margin-left: 5px;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-right: 150px;">
+                        <div style="display: flex;flex-direction: row; align-items: center;">
+                            <b>3</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(1)</p>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;">
+                            <b>0</b>
+                            <p style="color: #999;margin: 0; margin-left: 20px;">(0)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 30%; height:50%; background-color: white; border-radius: 20px; padding: 15px; margin-left: 20px; display:flex;flex-direction: column; ">
+               <h3><b>Ultimele Stiri</b></h3>
+               <div style="align-items: center;display: flex; margin-bottom: 15px;">
+                    <img style="border-radius: 10px; width: 200px;" src="https://livesport-ott-images.ssl.cdn.cra.cz/r300xfq60/46017328-97d2-4544-b4e4-722bfc6c9fda.avif"/>
+                    <b style="margin-left: 10px;">România are o echipă foarte tânără şi foarte talentată”, afirmă selecționerul Belgiei</b>
+               </div>
+               <div style="align-items: center; display: flex; margin-bottom: 15px;">
+                    <img style="border-radius: 10px; width: 200px;" src="https://livesport-ott-images.ssl.cdn.cra.cz/r300xfq60/3509f810-4eba-42f1-b533-3857b9926e0b.avif"/>
+                    <b style="margin-left: 10px;">Alibec vrea să revină în România ca să nu piardă lotul pentru Euro 2024. Singura echipă la care ar juca</b>
+               </div>
+               <div style="align-items: center; display: flex;">
+                    <img style="border-radius: 10px; width: 200px;" src="https://livesport-ott-images.ssl.cdn.cra.cz/r300xfq60/613cde96-8d08-4099-8fec-d8ce955ee8aa.avif"/>
+                    <b style="margin-left: 10px;">Răzvan Burleanu a stabilit obiectivul României la Euro 2024, după tragerea la sorți</b>
+               </div>
+            </div>
+        </div>
+
+        <script>
+            displayName();
+            function displayName() {
+                const divName = document.getElementById("printName");
+                const iconName = document.getElementById("iconName");
+                const login = document.getElementById("login");
+                const logout = document.getElementById("logout");
+                const name = localStorage.getItem("name");
+                if (name && name !== "") {
+                    divName.innerHTML="<h2><b> Buna, " + name +" !</b> </h2>";
+                    iconName.innerHTML="<span class=\"icon-name\">" + name[0] +"</span>";
+                    login.style.display = "none";
+                    logout.style.display = "flex";
+                } else {
+                    login.style.display = "flex";
+                    logout.style.display = "none";
+                    iconName.style.display = "none";
+                    divName.style.display = "none";
+                }
+            }
+
+            function logout() {
+                localStorage.removeItem("username");
+                localStorage.removeItem("password");
+                localStorage.removeItem("name");
+                window.location.reload();
+            }
+        </script>
+    </body>
+</html>

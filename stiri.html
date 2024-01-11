@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <style>
+            .navigare-titlu {
+                margin-left: 15px; 
+                color: white;
+            }
+            .top-stiri-cards {
+                width: 270px;
+            }
+            .top-stiri-imagini {
+                height: 160px; 
+                border-radius: 10px;
+                width: 100%;
+            }
+            .cele-mai-citite-cards {
+                display: flex;
+                flex-direction: row;
+                width: 80%;align-items: center;
+            }
+            .cele-mai-citite-imagini {
+                height: 50px;
+                border-radius: 5px;
+            }
+
+            .icon-name {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: green;
+                color: white;
+                height: 35px;
+                width: 40px;
+                border-radius: 55px;
+                margin-left: 5px;
+                font-size: 30px;
+                padding-bottom: 3px;
+            }
+        </style>
+    </head>
+    <header style="background-color: #001E28;">
+        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+            <div style="display: flex; align-items: center;">
+                <img style="height: 55px;" src="Football.png"/>
+                <a href='index.html' style="text-decoration: none;">
+                    <b style="font-size: 30px; color: white;">FlashScore</b>
+                </a> 
+            </div>
+            <div style="display: flex; align-items: center;">
+                <img style="height: 45px;" src="score-removebg-preview.png"/>
+                <a href='index.html' style="text-decoration: none;">
+                    <b style="margin-left: 15px; color: white;">REZULTATE</b>
+                </a>
+                <img style="height: 45px; margin-left: 90px;" src="R-removebg-preview.png"/>
+                <a href="stiri.html" style="text-decoration: none;">
+                    <b style="margin-left: 15px; color: white;">STIRI</b>
+                </a>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <div id="iconName"></div>
+                <div id="login" style="display: flex; align-items: center; cursor: pointer;">
+                    <img style="height: 45px;" src="login.png"/>
+                    <a href="login.html" style="text-decoration: none;">
+                        <b style="margin-left: 15px; color: white;">LOGIN</b>
+                    </a>
+                </div>
+                <div id="logout" style="display: flex; align-items: center;">
+                    <button onclick="logout()" style="text-decoration: none; background-color: transparent; border: 0; cursor: pointer;">
+                        <b style="margin-left: 15px; color: white;">LOGOUT</b>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <body style="background-color: #EEEEEE; margin:0">
+        <div style="display: flex; flex-direction: row; margin-right: 19px;">
+            <div style="margin-left: 80px; margin-right: 20px; margin-top: 50px; background-color: white;border-radius:20px;padding: 30px;">
+                <h2><b>Top Stiri</b></h2>
+                <div style="display: flex; flex-direction: row;">
+                    <img style="height: 220px; border-radius: 20px;" src="messi.jpg"/>
+                    <h1 style="margin-left: 15px;">
+                        Lionel Messi, de la Inter Miami, a câştigat Balonul de Aur pentru a opta oară, un record. 
+                    </h1>
+                </div>
+                <div style="margin-top: 20px; display: flex;flex-direction: row; justify-content: space-between;">
+                    <div class="top-stiri-cards">
+                        <img class="top-stiri-imagini" src="manchestercity.jpg"/>
+                        <h3>
+                            Manchester City, campioană în Premier League pentru al treilea sezon consecutiv! 
+                        </h3>
+                    </div>
+                    <div class="top-stiri-cards">
+                        <img class="top-stiri-imagini" src="tottenham.jpg"/>
+                        <h3>
+                            Tottenham a trecut prin diferite tranziții de-a lungul ultimelor sezoane, de la stǎri de agonie cu Mourinho ! 
+                        </h3>
+                    </div>
+                    <div class="top-stiri-cards">
+                        <img class="top-stiri-imagini" src="liverpool.jpg"/>
+                        <h3>
+                            Liverpool ajunge a treia in clasament ! 
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 55px;">
+                <h2><b>Cele mai citite</b></h2>
+                <div class="cele-mai-citite-cards">
+                    <img class="cele-mai-citite-imagini" src="https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/46278ac4-75a6-4030-8891-0b080a047f8f.jpeg"/>
+                    <h4 style="margin-left: 5px;">
+                        Ronaldo, reușită de generic în Arabia Saudită! ”Cel mai frumos gol din ultimii ani.
+                    </h4>
+                </div>
+                <div class="cele-mai-citite-cards">
+                    <img class="cele-mai-citite-imagini" src="https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/18a29ec2-9da0-496e-9f93-792fd7506908.jpeg"/>
+                    <h4 style="margin-left: 5px;">
+                        ”Tricolorii”, răsplătiți la mondialul de minifotbal. Au primit cele mai importante premii individuale.
+                    </h4>
+                </div>
+                <div class="cele-mai-citite-cards">
+                    <img class="cele-mai-citite-imagini" src="https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/c0bad188-4a4d-4b71-b441-a2934a2702d5.jpeg"/>
+                    <h4 style="margin-left: 5px;">
+                        ”Dollarumma”: Coregrafia pregătită de fanii lui AC Milan pentru Gianluigi Donnarumma.
+                    </h4>
+                </div>
+                <div class="cele-mai-citite-cards">
+                    <img class="cele-mai-citite-imagini" src="https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/d6284d02-f180-4b77-b88d-4f7a54337f30.jpeg"/>
+                    <h4 style="margin-left: 5px;">
+                        Radu Drăgușin, monitorizat de unul dintre giganții din Anglia. Scouterii l-au urmărit la meciul cu Atalanta. 
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 80px; width: 59%; margin-top: 20px; background-color: white;border-radius:20px;padding: 30px;">
+            <h2>
+                <b>Champions League</b>
+            </h2>
+            <div style="margin-top: 20px; display: flex;flex-direction: row; justify-content: space-between;">
+                <div style="width: 270px;">
+                    <img style="height: 160px; border-radius: 10px;width: 100%;" src="https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/e76b3a9a-f497-42d0-ab30-eac99b5bf5ae.jpeg"/>
+                    <h3>
+                        Antrenorul lui Copenhaga, încrezător că poate obține un rezultat pozitiv cu Manchester United
+                    </h3>
+                </div>
+                <div style="width: 270px;">
+                    <img style="height: 160px; border-radius: 10px;width: 100%;"src="https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/6806279b-7aa8-43a7-b73d-433fd93a606d.jpeg"/>
+                    <h3>
+                        UCL: Șahtior îi provoacă primul eșec Barcelonei / Dortmund nu permite revanșa lui Newcastle
+                    </h3>
+                </div>
+                <div style="width: 270px;">
+                    <img style="height: 160px; border-radius: 10px;width: 100%;" src="https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/95ea7595-649e-4c77-afdc-e07e345848ab.jpeg"/>
+                    <h3>   
+                        UCL: AC Milan recuperează punctele pierdute de la PSG / Atletico face set cu Celtic 
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 80px; width: 59%; margin-top: 20px; background-color: white;border-radius:20px;padding: 30px;">
+            <h2>
+                <b>Mai multe stiri</b>
+            </h2>
+            <div style="margin-top: 20px;">
+                <div style="display: flex;align-items: center;margin-bottom: 20px;">
+                    <img style="height: 197px; border-radius: 10px;width: 300px;margin-right: 70px;" src="https://th.bing.com/th/id/R.ae177c743f38cdfafac21a54621a0f71?rik=hK7Obj8dDVaPqw&pid=ImgRaw&r=0"/>
+                    <h3>
+                        Salah, starul lui Liverpool, primul pe lista vedetelor africane care încep calificările pentru Cupa Mondială 
+                    </h3>
+                </div>
+                <div style="display: flex;align-items: center;margin-bottom: 20px;">
+                    <img style="height: 197px; border-radius: 10px;width: 300px;margin-right: 70px;"src="https://acefootball.com/wp-content/uploads/2020/09/1182997354.jpg"/>
+                    <h3>
+                        Suarez, înainte de duelul cu Messi: ”Sunt fericit". Atacantul joacă din nou pentru Uruguay
+                    </h3>
+                </div>
+                <div style="display: flex;align-items: center;">
+                    <img style="height: 197px; border-radius: 10px;width: 300px;margin-right: 70px;" src="bellingham.jpg"/>
+                    <h3>   
+                        Jude Bellingham nu va juca pentru Anglia în ultimele partide din preliminariile Euro 2024
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            displayName();
+            function displayName() {
+                const iconName = document.getElementById("iconName");
+                const login = document.getElementById("login");
+                const logout = document.getElementById("logout");
+                const name = localStorage.getItem("name");
+                if (name && name !== "") {
+                    iconName.innerHTML="<span class=\"icon-name\">" + name[0] +"</span>";
+                    login.style.display = "none";
+                    logout.style.display = "flex";
+                } else {
+                    login.style.display = "flex";
+                    logout.style.display = "none";
+                    iconName.style.display = "none";
+                }
+            }
+
+            function logout() {
+                localStorage.removeItem("username");
+                localStorage.removeItem("password");
+                localStorage.removeItem("name");
+                window.location.reload();
+            }
+        </script>
+    </body>
+    <footer style="margin-top: 100px;background-color: white;height: 80px;display: flex;justify-content: center;align-items: center;">
+        <h4>Copyright © 1995-2023 Flashscore Inc. All Rights Reserved. User Agreement, Privacy, Payments Terms of Use, Cookies and AdChoice.</h4>
+    </footer>
+</html>
